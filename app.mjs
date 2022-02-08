@@ -17,3 +17,6 @@ function distance() {
 }
 
 distance();
+
+// Limitantes del plan estándar: https://openrouteservice.org/plans/.
+// 2,000 request al día y 40 por minuto.
