@@ -11,8 +11,11 @@ function distance() {
     fetch(url)
         .then((response) => { return response.json(); })
         .then(function (data) {
-            console.log("Distancia: " + data.features[0].properties.summary.distance / 1000 + " kilómetros.");
-            console.log("Duración: " + data.features[0].properties.summary.duration / 60 + " minutos.");
+            //  console.log(data);
+            const distanciakm = data.features[0].properties.summary.distance / 1000;
+            const tiempomin = data.features[0].properties.summary.duration / 60;
+            console.log("Distancia: " + distanciakm + " kilómetros.");
+            console.log("Duración: " + tiempomin + " minutos.");
         });
 }
 
